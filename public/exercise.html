@@ -25,6 +25,12 @@
         <div class="ui raised card m-auto">
           <h2>Add Your Exercise</h2>
           <form action="POST">
+            <!-- <div class="workout-type">
+              <label for="day">Date:</label>
+              <div class="form-group">
+                <input type="date" class="form-control" id="date">
+              </div>
+            </div> -->
             <div class="workout-type">
               <label for="type">Exercise Type:</label>
               <select name="type" id="type">
@@ -34,16 +40,17 @@
               </select>
             </div>
             <div class="cardio-form d-none">
-                <select name="type" class="cardio-name" id="cardio-name">
-                  <option value="Select Activity">Select Activity</option>
-                  <option value="Walking">Walking</option>
-                  <option value="Sprinting">Sprinting</option>
-                  <option value="Tabata">Tabata</option>
-                  <option value="Hiking">Hiking</option>
-                  <option value="Playing">Playing</option>
-                  <option value="Some Other Nonsense">Some Other Nonsense<option>
-                </select>
-             
+              <select name="type" class="cardio-name" id="cardio-name">
+                <option value="Select Activity">Select Activity</option>
+                <option value="Walking">Walking</option>
+                <option value="Sprinting">Sprinting</option>
+                <option value="Tabata">Tabata</option>
+                <option value="Hiking">Hiking</option>
+                <option value="Playing">Playing</option>
+                <option value="Some Other Nonsense">Some Other Nonsense</option
+                ><option> </option
+              ></select>
+
               <div class="duration">
                 <label for="duration">Duration (minutes):</label>
                 <input

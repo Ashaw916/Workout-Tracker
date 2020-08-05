@@ -1,3 +1,4 @@
+const date = document.querySelector("#date")
 const workoutTypeSelect = document.querySelector("#type");
 const cardioForm = document.querySelector(".cardio-form");
 const resistanceForm = document.querySelector(".resistance-form");
@@ -81,9 +82,9 @@ function validateInputs() {
       isValid = false;
     }
 
-    // if (distanceInput.value.trim() === "") {
-    //   isValid = false;
-    // }
+    if (date.value.trim() === "") {
+      isValid = false;
+    }
   }
 
   if (isValid) {
@@ -103,7 +104,7 @@ async function handleFormSubmit(event) {
   if (workoutType === "cardio") {
     workoutData.type = "cardio";
     workoutData.name = cardioNameInput.value.trim();
-    // workoutData.distance = Number(distanceInput.value.trim());
+    workoutData.date = Number(date.value.trim());
     workoutData.duration = Number(durationInput.value.trim());
   } else if (workoutType === "resistance") {
     workoutData.type = "resistance";
