@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-
+//bgG9kM96Dcz*E9!
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/workout",
   {

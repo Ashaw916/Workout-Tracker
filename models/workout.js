@@ -10,7 +10,6 @@ const workoutSchema = new Schema(
           type: Date,
           default: () => new Date(),
         },
-
         name: {
           type: String,
           trim: true,

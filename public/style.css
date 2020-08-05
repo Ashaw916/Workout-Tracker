@@ -16,7 +16,8 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: rgb(29, 29, 29);
+  background-color: #242424;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 a {
   padding: 1rem 5rem;
@@ -30,11 +31,6 @@ body,
 .wrapper {
   height: 100%;
   background-color: #242424;
-}
-
-body {
-  background-color: #242424;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav {
@@ -505,5 +501,68 @@ body {
   100% {
     opacity: 0;
     right: -320px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  a,
+  a:hover,
+  a:active,
+  a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+  nav {
+    text-align: center;
+    background-color: #292929;
+    color: #ffffff;
+    height: auto;
+    padding: 10px;
+    line-height: 3;
+    font-size: 1.2rem;
+  }
+
+  header {
+    height: 150px;
+    padding-top: 80px;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #242424;
+    color: #e5e5e5;
+
+  }
+
+  .workout {
+    background-color: #242424;
+    color: #e5e5e5;
+  }
+  body > div.wrapper > div {
+    width: 200px;
+    background-color: #242424;
+    color: #e5e5e5;
+
+  }
+  div.wrapper.workout {
+    background-color: #242424;
+    color: #e5e5e5;
+
+  }
+  body > div.wrapper {
+    background-color: #242424;
+    color: #e5e5e5;
+
+  }
+  div.ui.raised.card {
+    background-color: #292929;
+    color: #ffffff;
+    border: none;
+
+  }
+  body > div.wrapper.workout > div > div {
+    background-color: #292929;
+    color: #ffffff;
+    border: none;
+  }
+  .exercise .ui.card{
+    width:300px;
   }
 }
