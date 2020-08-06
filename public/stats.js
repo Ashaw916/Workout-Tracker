@@ -44,19 +44,35 @@ function populateChart(data) {
   let days = getDay(data);
   let dates = [];
 
+  var weekdays = new Array(
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  );
+  //Use the getDay() method to get the day.
+
+  console.log(days);
   days.forEach((data) => {
     const event = new Date(data);
     let workoutDate = event.toString();
-    dates.push(`${workoutDate} \n`);
+    dates.push(`${workoutDate}`);
   });
 
   let dayName = [];
-
+  console.log(dates);
   for (var i = 0; i < dates.length; i++) {
-    let weekDayName = dates[i].split(" ");
-    dayName.push(weekDayName[0]);
+    // let weekDayName = dates[i].split(" ");
+    var date = new Date(dates[i]);
+    console.log("date:", date, dates[i]);
+    var day = date.getDay();
+    console.log("day label: ", day, weekdays[day]);
+    dayName.push(weekdays[day]);
   }
-  console.log(`dayName \n ${dayName} \n`);
+  console.log(dayName);
 
   // let dayNameLables = dayName.toString().slice(",");
   // console.log(`dayNameLables \n ${dayNameLables} \n`);
@@ -78,9 +94,7 @@ function populateChart(data) {
   let lineChart = new Chart(line, {
     type: "line",
     data: {
-      labels: [
-        `${dayName}`
-      ],
+      labels: dayName,
       datasets: [
         {
           label: "Workout Duration In Minutes",
@@ -120,15 +134,7 @@ function populateChart(data) {
   let barChart = new Chart(bar, {
     type: "bar",
     data: {
-      labels: [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ],
+      labels: dayName,
       datasets: [
         {
           label: "Pounds",
@@ -226,10 +232,11 @@ function duration(data) {
 
 function getDay(data) {
   let days = [];
+  console.log("getDay", data);
   data.forEach((workout) => {
-    workout.exercises.forEach((exercise) => {
-      days.push(exercise.day);
-    });
+  
+      days.push(workout.day);
+  
   });
   return days;
 }

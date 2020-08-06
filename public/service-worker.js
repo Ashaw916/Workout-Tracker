@@ -1,17 +1,17 @@
 const FILES_TO_CACHE = [
   "/",
   "/index.html",
-  // "/stats.html",
-  // "/exercise.html",
-  // "/index.js",
-  // "/stats.js",
-  // "/exercise.js",
-  // "/api.js",
-  // "/workout-style.css",
+  "/stats.html",
+  "/exercise.html",
+  "/index.js",
+  "/stats.js",
+  "/exercise.js",
+  "/api.js",
+  "/workout-style.css",
   "/manifest.webmanifest",
-  // "/style.css",
-  // "../routes/api.js",
-  // "../routes/html.js"
+  "/style.css",
+  "../routes/api.js",
+  "../routes/html.js"
 ];
 
 const CACHE_NAME = "static-cache-v2";
